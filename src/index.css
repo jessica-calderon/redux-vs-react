@@ -11,6 +11,21 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Dark theme CSS variables (default) */
+  --bg-primary: #242424;
+  --bg-card: #1a1a1a;
+  --bg-info: #2a2a2a;
+  --bg-surface: #2a2a2a;
+  --bg-input: #242424;
+  --text-primary: rgba(255, 255, 255, 0.95);
+  --text-secondary: rgba(255, 255, 255, 0.85);
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --border-color: #333;
+  --border-light: #444;
+  --accent-color: #646cff;
+  --accent-hover: #747bff;
+  --shadow: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -66,6 +81,21 @@ button:focus-visible {
 body.light-theme {
   color: #1a1a1a;
   background-color: #ffffff;
+
+  /* Light theme CSS variables */
+  --bg-primary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-info: #e3f2fd;
+  --bg-surface: #f5f5f5;
+  --bg-input: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #333;
+  --text-muted: #666;
+  --border-color: #e0e0e0;
+  --border-light: #d0d0d0;
+  --accent-color: #4c5fd5;
+  --accent-hover: #646cff;
+  --shadow: rgba(0, 0, 0, 0.1);
 }
 
 body.light-theme button {
@@ -77,4 +107,20 @@ body.light-theme button {
 body.light-theme button:hover {
   background-color: #e0e0e0;
   border-color: #4c5fd5;
+}
+
+body.dark-theme {
+  color: rgba(255, 255, 255, 0.95);
+  background-color: #242424;
+}
+
+body.dark-theme button {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+body.dark-theme button:hover {
+  background-color: var(--bg-surface);
+  border-color: var(--accent-color);
 }

@@ -44,7 +44,7 @@ export default function ReduxStatePage() {
   return (
     <div className="page-container">
       <h1>Redux State Demo (Redux Toolkit)</h1>
-      <p className="feature-explanation" style={{ marginBottom: '2rem', padding: '1rem', backgroundColor: '#e3f2fd', borderRadius: '8px' }}>
+      <p className="feature-explanation info-box-top">
         <strong>The Purpose of Redux State Management:</strong> Redux provides a global store that persists across navigation and page refreshes. 
         This counter is stored in Redux, so it stays the same when you navigate to other pages or refresh the browser. 
         Notice the counter in the navigation bar - it shows the same value because Redux state is accessible from any component.
