@@ -3,20 +3,20 @@
 
 This is a small project I built to explore the practical differences between React's built-in state tools (`useState`, `useContext`) and Redux Toolkit. The demo runs directly on GitHub Pages, and each page shows a different approach so you can compare how they behave in a simple, real example.
 
-**Live Demo:**\
+**Live Demo:**  
 <https://jessica-calderon.github.io/redux-vs-react/>
 
-**GitHub Repo:**\
+**GitHub Repo:**  
 <https://github.com/jessica-calderon/redux-vs-react>
 
-* * * * *
+---
 
 **Why I Put This Together**
 ---------------------------
 
 I wanted a clear way to revisit when React state is enough and when Redux provides real value. Instead of reading long docs, building a tiny side-by-side example made it much easier to see the differences in state behavior, persistence, and how each approach scales.
 
-* * * * *
+---
 
 **React State (useState, useContext)**
 --------------------------------------
@@ -35,7 +35,7 @@ Typical uses: form fields, toggles, visual UI state, small interactive component
 
 Where it struggles: prop drilling, duplicated state, and anything that needs to survive navigation or refresh.
 
-* * * * *
+---
 
 **Redux Toolkit**
 -----------------
@@ -54,7 +54,7 @@ Redux Toolkit makes more sense when:
 
 It adds more structure but pays off when the app becomes more complex.
 
-* * * * *
+---
 
 **What the Demo Shows**
 -----------------------
@@ -67,7 +67,7 @@ Both pages implement the same features:
 
 -   Search filter
 
-The **Local State** page uses `useState` and `useContext`.\
+The **Local State** page uses `useState` and `useContext`.  
 The **Redux Demo** page uses Redux Toolkit slices, selectors, and an async thunk.
 
 If you navigate back and forth, you'll notice:
@@ -78,12 +78,13 @@ If you navigate back and forth, you'll notice:
 
 That simple difference highlights when global state becomes valuable.
 
-* * * * *
+---
 
 **Project Structure**
 ---------------------
 
-`src/
+```
+src/
 ├── pages/
 │   ├── LocalStatePage.tsx
 │   └── ReduxStatePage.tsx
@@ -96,19 +97,21 @@ That simple difference highlights when global state becomes valuable.
 │   ├── store.ts
 │   └── hooks.ts
 └── components/
-    └── Navigation.tsx`
+    └── Navigation.tsx
+```
 
-* * * * *
-
+---
 **Running It Locally (Optional)**
 ---------------------------------
 
 You don't need to install anything to view the demo, but if you want to explore or modify the code:
 
-`npm install
-npm run dev`
+```bash
+npm install
+npm run dev
+```
 
-* * * * *
+---
 
 **How I Decide When to Use Redux**
 ----------------------------------
