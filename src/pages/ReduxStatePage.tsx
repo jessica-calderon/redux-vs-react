@@ -85,7 +85,7 @@ export default function ReduxStatePage() {
           onChange={(e) => handleSearchChange(e.target.value)}
           className="search-input"
         />
-        {loading && <p className="loading">⏳ Loading... (simulating API call)</p>}
+        {loading && <p className="loading"><i className="fas fa-spinner fa-spin"></i> Loading... (simulating API call)</p>}
         <div className="results-list">
           {results.length > 0 ? (
             <ul>
@@ -98,7 +98,7 @@ export default function ReduxStatePage() {
           ) : null}
         </div>
         <p className="search-note">
-          💡 <strong>Key Difference:</strong> Redux automatically manages loading/error states through the async thunk. 
+          <i className="fas fa-lightbulb"></i> <strong>Key Difference:</strong> Redux automatically manages loading/error states through the async thunk. 
           Check Redux DevTools to see the pending → fulfilled action flow!
         </p>
       </div>
@@ -106,21 +106,15 @@ export default function ReduxStatePage() {
       <div className="explanation-box">
         <h3>Why Redux State Management Matters:</h3>
         <ul>
-          <li>✅ <strong>Persists Across Navigation</strong> - Increment the counter, then navigate to "Local State Demo" and back. The counter stays! Check the nav bar - it shows the same value even when you're on a different page.</li>
-          <li>✅ <strong>Persists Across Page Refreshes</strong> - Increment the counter, then refresh the page. It's still there! State is saved to localStorage automatically.</li>
-          <li>✅ <strong>Global Access</strong> - Any component can access this state without prop drilling. The Navigation component shows the counter even though it's not on this page.</li>
-          <li>✅ <strong>Centralized Store</strong> - Single source of truth. One place to manage state, accessible from anywhere.</li>
-          <li>✅ <strong>Async Operations</strong> - Built-in support for async actions (see search above with loading states)</li>
-          <li>✅ <strong>DevTools</strong> - Time-travel debugging with Redux DevTools extension</li>
-          <li>✅ <strong>Predictable Updates</strong> - Actions and reducers make state changes traceable and debuggable</li>
-          <li>✅ <strong>Scalability</strong> - Easy to add new features without passing props through multiple components</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Persists Across Navigation</strong> - Increment the counter, then navigate to "Local State Demo" and back. The counter stays! Check the nav bar - it shows the same value even when you're on a different page.</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Persists Across Page Refreshes</strong> - Increment the counter, then refresh the page. It's still there! State is saved to localStorage automatically.</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Global Access</strong> - Any component can access this state without prop drilling. The Navigation component shows the counter even though it's not on this page.</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Centralized Store</strong> - Single source of truth. One place to manage state, accessible from anywhere.</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Async Operations</strong> - Built-in support for async actions (see search above with loading states)</li>
+          <li><i className="fas fa-check-circle"></i> <strong>DevTools</strong> - Time-travel debugging with Redux DevTools extension</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Predictable Updates</strong> - Actions and reducers make state changes traceable and debuggable</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Scalability</strong> - Easy to add new features without passing props through multiple components</li>
         </ul>
-        <p className="demo-tip">
-          <strong>Try this:</strong> Increment the counter to 10, navigate to "Local State Demo", then come back. The counter is still 10! Now refresh the page - it's still 10! That's the power of Redux state management with persistence.
-        </p>
-        <p className="demo-tip">
-          <strong>Compare:</strong> Go to the Local State page and increment its counter, then navigate away and back. It resets to 0. That's the difference - local state is component-scoped and temporary.
-        </p>
       </div>
     </div>
   )

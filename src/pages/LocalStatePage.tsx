@@ -79,21 +79,15 @@ export default function LocalStatePage() {
       <div className="explanation-box">
         <h3>React Native State Management (useState, useContext):</h3>
         <ul>
-          <li>✅ <strong>Simple</strong> - useState for component-level state, useContext for sharing across a few components</li>
-          <li>✅ <strong>No Dependencies</strong> - Built into React, no extra libraries needed</li>
-          <li>✅ <strong>Perfect for Small Apps</strong> - Great when state is only needed in a few components</li>
-          <li>⚠️ <strong>State is Lost on Navigation</strong> - Increment the counter, navigate to Redux page and back. It resets to 0!</li>
-          <li>⚠️ <strong>State is Lost on Refresh</strong> - Refresh the page and all state resets. It's stored in memory only.</li>
-          <li>⚠️ <strong>Component-Scoped</strong> - State lives with the component. When component unmounts, state is gone.</li>
-          <li>⚠️ <strong>No Global Access</strong> - Can't easily access this counter from other components without prop drilling</li>
-          <li>⚠️ <strong>No Built-in Persistence</strong> - Would need to manually add localStorage for persistence</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Simple</strong> - useState for component-level state, useContext for sharing across a few components</li>
+          <li><i className="fas fa-check-circle"></i> <strong>No Dependencies</strong> - Built into React, no extra libraries needed</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Perfect for Small Apps</strong> - Great when state is only needed in a few components</li>
+          <li><i className="fas fa-exclamation-triangle"></i> <strong>State is Lost on Navigation</strong> - Increment the counter, navigate to Redux page and back. It resets to 0!</li>
+          <li><i className="fas fa-exclamation-triangle"></i> <strong>State is Lost on Refresh</strong> - Refresh the page and all state resets. It's stored in memory only.</li>
+          <li><i className="fas fa-exclamation-triangle"></i> <strong>Component-Scoped</strong> - State lives with the component. When component unmounts, state is gone.</li>
+          <li><i className="fas fa-exclamation-triangle"></i> <strong>No Global Access</strong> - Can't easily access this counter from other components without prop drilling</li>
+          <li><i className="fas fa-exclamation-triangle"></i> <strong>No Built-in Persistence</strong> - Would need to manually add localStorage for persistence</li>
         </ul>
-        <p className="demo-tip">
-          <strong>Notice:</strong> Look at the navigation bar - it shows "Redux Counter: X". That's Redux state, accessible from anywhere. This page's counter can't be accessed from the nav bar because it's local state.
-        </p>
-        <p className="demo-tip">
-          <strong>Try this:</strong> Increment this counter to 5, then navigate to "Redux Demo" and back. The counter resets! Now go to Redux page, increment to 10, navigate here and back - Redux counter stays at 10. That's the difference.
-        </p>
       </div>
     </div>
   )

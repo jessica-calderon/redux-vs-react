@@ -85,6 +85,11 @@ body.light-theme .comparison-banner strong {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.search-note i {
+  margin-right: 0.5rem;
+  color: #ffc107;
+}
+
 .counter-display {
   text-align: center;
   margin: 1.5rem 0;
@@ -161,6 +166,10 @@ body.light-theme .comparison-banner strong {
   font-style: italic;
 }
 
+.loading i {
+  margin-right: 0.5rem;
+}
+
 .explanation-box {
   background-color: #1a1a1a;
   border: 2px solid #646cff;
@@ -181,6 +190,19 @@ body.light-theme .comparison-banner strong {
 .explanation-box li {
   margin: 0.5rem 0;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.explanation-box li i {
+  margin-right: 0.5rem;
+  color: #646cff;
+}
+
+.explanation-box li i.fa-check-circle {
+  color: #4caf50;
+}
+
+.explanation-box li i.fa-exclamation-triangle {
+  color: #ff9800;
 }
 
 .explanation-box p {
@@ -337,6 +359,18 @@ body.light-theme .explanation-box {
 body.light-theme .explanation-box li,
 body.light-theme .explanation-box p {
   color: #1a1a1a;
+}
+
+body.light-theme .explanation-box li i.fa-check-circle {
+  color: #4caf50;
+}
+
+body.light-theme .explanation-box li i.fa-exclamation-triangle {
+  color: #ff9800;
+}
+
+body.light-theme .search-note i {
+  color: #ffc107;
 }
 
 body.light-theme .demo-tip {
