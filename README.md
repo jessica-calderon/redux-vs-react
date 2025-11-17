@@ -1,89 +1,126 @@
-# Redux vs React State Management
+**Redux vs React State Management**
+===================================
 
-A simple demo project comparing React's built-in state management (`useState`, `useContext`) with Redux Toolkit. Both pages implement the same features so you can see the differences side-by-side.
+This is a small project I built to explore the practical differences between React's built-in state tools (`useState`, `useContext`) and Redux Toolkit. The demo runs directly on GitHub Pages, and each page shows a different approach so you can compare how they behave in a simple, real example.
 
-## Quick Start
+**Live Demo:**\
+<https://jessica-calderon.github.io/redux-vs-react/>
 
-```bash
-npm install
-npm run dev
-```
+**GitHub Repo:**\
+<https://github.com/jessica-calderon/redux-vs-react>
 
-Open `http://localhost:5173` and check out both pages.
+* * * * *
 
-## The Difference
+**Why I Put This Together**
+---------------------------
 
-### React State (useState, useContext)
+I wanted a clear way to revisit when React state is enough and when Redux provides real value. Instead of reading long docs, building a tiny side-by-side example made it much easier to see the differences in state behavior, persistence, and how each approach scales.
 
-React's built-in state is perfect for most apps. Use it when:
+* * * * *
 
-- Your app is small to medium-sized
-- State only needs to be shared between a few components
-- You don't need complex async operations
-- State doesn't need to persist across navigation
-- You want to keep dependencies minimal
+**React State (useState, useContext)**
+--------------------------------------
 
-**Good for:** form inputs, UI toggles, component-level state, simple counters.
+React's built-in state tools work well when:
 
-**Limitations:** State is lost when components unmount, no built-in async handling, can get messy with prop drilling in large apps.
+-   State only lives inside one component or a small section of the tree
 
-### Redux Toolkit
+-   You don't need global persistence
 
-Redux is overkill for simple apps, but it's worth it when:
+-   You want a simple, lightweight setup
 
-- Your app is large and complex
-- State needs to be shared across many components
-- You need time-travel debugging (Redux DevTools)
-- You're doing lots of async operations (API calls, side effects)
-- State needs to persist across navigation
-- You need middleware for logging, persistence, etc.
+-   You're handling straightforward UI behavior
 
-**Good for:** user auth state, shopping carts, global settings, API data caching, complex app state.
+Typical uses: form fields, toggles, visual UI state, small interactive components.
 
-**Trade-offs:** More boilerplate, steeper learning curve, but better tooling and scalability.
+Where it struggles: prop drilling, duplicated state, and anything that needs to survive navigation or refresh.
 
-## What This Project Shows
+* * * * *
 
-Both pages have the same features:
-- Counter
-- Theme toggle
-- Search filter
+**Redux Toolkit**
+-----------------
 
-The Local State page uses `useState` and `useContext`. The Redux page uses Redux Toolkit with async thunks. Try navigating between them - you'll notice the Redux counter persists while the local state one resets.
+Redux Toolkit makes more sense when:
 
-## Project Structure
+-   State needs to be shared across many components
 
-```
-src/
+-   The app grows and state becomes harder to coordinate
+
+-   You're dealing with async logic like API calls
+
+-   You want structured, predictable state updates
+
+-   You want DevTools for debugging and time-travel
+
+It adds more structure but pays off when the app becomes more complex.
+
+* * * * *
+
+**What the Demo Shows**
+-----------------------
+
+Both pages implement the same features:
+
+-   Counter
+
+-   Theme toggle
+
+-   Search filter
+
+The **Local State** page uses `useState` and `useContext`.\
+The **Redux Demo** page uses Redux Toolkit slices, selectors, and an async thunk.
+
+If you navigate back and forth, you'll notice:
+
+-   The **Redux counter persists** across navigation and refresh
+
+-   The **Local State counter resets** because the component unmounts
+
+That simple difference highlights when global state becomes valuable.
+
+* * * * *
+
+**Project Structure**
+---------------------
+
+`src/
 ├── pages/
-│   ├── LocalStatePage.tsx      # useState + useContext demo
-│   └── ReduxStatePage.tsx      # Redux Toolkit demo
+│   ├── LocalStatePage.tsx
+│   └── ReduxStatePage.tsx
 ├── context/
-│   └── ThemeContext.tsx        # React Context (local state only)
+│   └── ThemeContext.tsx
 ├── store/
 │   ├── counterSlice.ts
 │   ├── themeSlice.ts
-│   ├── searchSlice.ts         # includes async thunk example
+│   ├── searchSlice.ts
 │   ├── store.ts
 │   └── hooks.ts
 └── components/
-    └── Navigation.tsx
-```
+    └── Navigation.tsx`
 
-## Redux DevTools
+* * * * *
 
-The Redux page works with Redux DevTools. Install the browser extension and you can see all actions, state changes, and use time-travel debugging.
+**Running It Locally (Optional)**
+---------------------------------
 
-## Deployment
+You don't need to install anything to view the demo, but if you want to explore or modify the code:
 
-This is set up for GitHub Pages. Run `npm run deploy` to build and deploy.
+`npm install
+npm run dev`
 
-## When Should You Use Redux?
+* * * * *
 
-Start with React state. If you find yourself:
-- Passing props through 3+ component levels
-- Duplicating state across components
-- Struggling with async state management
-- Needing to debug complex state flows
+**How I Decide When to Use Redux**
+----------------------------------
 
-Then consider Redux. Most apps don't need it, but when you do, it's worth the setup.
+I usually start with React state. If the app reaches a point where:
+
+-   I'm passing the same data through multiple layers
+
+-   I need persistence
+
+-   Async logic becomes harder to organize
+
+-   Debugging state changes gets messy
+
+that's the point where Redux tends to help more than it hurts.
