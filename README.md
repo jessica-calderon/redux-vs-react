@@ -116,7 +116,7 @@ npm run dev
 **How I Decide When to Use Redux**
 ----------------------------------
 
-I usually start with React state. If the app reaches a point where:
+After building this comparison, I learned that React state works well for most cases, but Redux becomes valuable when:
 
 -   I'm passing the same data through multiple layers
 
@@ -126,4 +126,4 @@ I usually start with React state. If the app reaches a point where:
 
 -   Debugging state changes gets messy
 
-that's the point where Redux tends to help more than it hurts.
+That's the point where Redux tends to help more than it hurts.
