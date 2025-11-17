@@ -24,8 +24,8 @@ export default function Navigation() {
           >
             Redux Demo
           </Link>
-          <div className="redux-indicator" title="Redux counter persists across navigation! Try incrementing on Redux page, then navigate away and back.">
-            <span className="redux-label">Redux Counter:</span>
+          <div className="redux-indicator" title="Redux counter persists across navigation and page refreshes! This demonstrates global state accessible from any component.">
+            <span className="redux-label">Redux Counter (persists):</span>
             <span className="redux-value">{reduxCounter}</span>
           </div>
         </div>

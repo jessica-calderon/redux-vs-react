@@ -10,7 +10,36 @@
   color: #646cff;
 }
 
+.comparison-banner {
+  background-color: #2a2a2a;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 5px solid #646cff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.comparison-banner strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  color: #646cff;
+}
+
 body.light-theme .page-container h1 {
+  color: #4c5fd5;
+}
+
+body.light-theme .comparison-banner {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
+  border-left-color: #4c5fd5;
+}
+
+body.light-theme .comparison-banner strong {
   color: #4c5fd5;
 }
 

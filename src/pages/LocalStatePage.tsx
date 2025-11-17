@@ -21,6 +21,12 @@ export default function LocalStatePage() {
     <div className="page-container">
       <h1>Local State Demo (React Native State Management)</h1>
       
+      <div className="comparison-banner">
+        <strong>Notice the difference:</strong> Look at the navigation bar above - it shows "Redux Counter (persists): X". 
+        That Redux counter persists when you navigate between pages and even survives page refreshes. 
+        This page's counter below uses local state (useState), so it resets to 0 when you navigate away or refresh the page.
+      </div>
+      
       <div className="demo-section">
         <h2>Counter (useState)</h2>
         <div className="counter-display">
@@ -71,23 +77,22 @@ export default function LocalStatePage() {
       </div>
 
       <div className="explanation-box">
-        <h3>Why This Page Uses React Native State:</h3>
+        <h3>React Native State Management (useState, useContext):</h3>
         <ul>
-          <li>✅ <strong>useState</strong> for simple component-level state (counter, search)</li>
-          <li>✅ <strong>useContext</strong> for sharing theme across this page's components</li>
-          <li>✅ Perfect for small apps or isolated features</li>
-          <li>✅ No external dependencies needed</li>
-          <li>✅ Simple and straightforward for basic state needs</li>
-          <li>⚠️ <strong>State is lost when navigating away</strong> - Try incrementing the counter, then navigate to Redux page and back. The counter resets to 0!</li>
-          <li>⚠️ <strong>State is lost on page refresh</strong> - All local state resets when you refresh the page. This is expected behavior for in-memory state!</li>
-          <li>⚠️ <strong>Context is scoped</strong> - Theme only works within ThemeProvider wrapper</li>
-          <li>⚠️ Can become complex with deeply nested prop drilling</li>
-          <li>⚠️ No built-in async handling - would need useEffect + manual state management</li>
-          <li>⚠️ No persistence - Would need to manually add localStorage/sessionStorage for persistence</li>
+          <li>✅ <strong>Simple</strong> - useState for component-level state, useContext for sharing across a few components</li>
+          <li>✅ <strong>No Dependencies</strong> - Built into React, no extra libraries needed</li>
+          <li>✅ <strong>Perfect for Small Apps</strong> - Great when state is only needed in a few components</li>
+          <li>⚠️ <strong>State is Lost on Navigation</strong> - Increment the counter, navigate to Redux page and back. It resets to 0!</li>
+          <li>⚠️ <strong>State is Lost on Refresh</strong> - Refresh the page and all state resets. It's stored in memory only.</li>
+          <li>⚠️ <strong>Component-Scoped</strong> - State lives with the component. When component unmounts, state is gone.</li>
+          <li>⚠️ <strong>No Global Access</strong> - Can't easily access this counter from other components without prop drilling</li>
+          <li>⚠️ <strong>No Built-in Persistence</strong> - Would need to manually add localStorage for persistence</li>
         </ul>
         <p className="demo-tip">
-          💡 <strong>Try this:</strong> Increment the counter to 5, then navigate to "Redux Demo" and back. 
-          Notice the counter resets because local state doesn't persist across navigation! Also try refreshing the page - state is lost because it's stored in memory.
+          <strong>Notice:</strong> Look at the navigation bar - it shows "Redux Counter: X". That's Redux state, accessible from anywhere. This page's counter can't be accessed from the nav bar because it's local state.
+        </p>
+        <p className="demo-tip">
+          <strong>Try this:</strong> Increment this counter to 5, then navigate to "Redux Demo" and back. The counter resets! Now go to Redux page, increment to 10, navigate here and back - Redux counter stays at 10. That's the difference.
         </p>
       </div>
     </div>
