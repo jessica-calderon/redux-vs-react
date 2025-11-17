@@ -79,13 +79,15 @@ export default function LocalStatePage() {
           <li>✅ No external dependencies needed</li>
           <li>✅ Simple and straightforward for basic state needs</li>
           <li>⚠️ <strong>State is lost when navigating away</strong> - Try incrementing the counter, then navigate to Redux page and back. The counter resets to 0!</li>
+          <li>⚠️ <strong>State is lost on page refresh</strong> - All local state resets when you refresh the page. This is expected behavior for in-memory state!</li>
           <li>⚠️ <strong>Context is scoped</strong> - Theme only works within ThemeProvider wrapper</li>
           <li>⚠️ Can become complex with deeply nested prop drilling</li>
           <li>⚠️ No built-in async handling - would need useEffect + manual state management</li>
+          <li>⚠️ No persistence - Would need to manually add localStorage/sessionStorage for persistence</li>
         </ul>
         <p className="demo-tip">
           💡 <strong>Try this:</strong> Increment the counter to 5, then navigate to "Redux Demo" and back. 
-          Notice the counter resets because local state doesn't persist across navigation!
+          Notice the counter resets because local state doesn't persist across navigation! Also try refreshing the page - state is lost because it's stored in memory.
         </p>
       </div>
     </div>
