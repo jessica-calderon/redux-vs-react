@@ -10,7 +10,7 @@ export default function ReduxStatePage() {
   const count = useAppSelector((state) => state.counter.value)
   const theme = useAppSelector((state) => state.theme.theme)
   const { query, results, loading } = useAppSelector((state) => state.search)
-  const debounceTimer = useRef<NodeJS.Timeout | null>(null)
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     document.body.className = theme === 'dark' ? 'dark-theme' : 'light-theme'
