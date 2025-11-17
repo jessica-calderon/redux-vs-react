@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#61dafb" opacity="0.2"/>
+  
+  <!-- React symbol (left side) -->
+  <g transform="translate(25, 50)">
+    <ellipse cx="0" cy="0" rx="15" ry="5" fill="none" stroke="#61dafb" stroke-width="2"/>
+    <ellipse cx="0" cy="0" rx="15" ry="5" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(60)"/>
+    <ellipse cx="0" cy="0" rx="15" ry="5" fill="none" stroke="#61dafb" stroke-width="2" transform="rotate(-60)"/>
+    <circle cx="0" cy="0" r="3" fill="#61dafb"/>
+  </g>
+  
+  <!-- VS text -->
+  <text x="50" y="55" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#764abc" text-anchor="middle">VS</text>
+  
+  <!-- Redux symbol (right side - simplified store symbol) -->
+  <g transform="translate(75, 50)">
+    <rect x="-8" y="-8" width="16" height="16" fill="none" stroke="#764abc" stroke-width="2"/>
+    <circle cx="0" cy="0" r="4" fill="#764abc"/>
+  </g>
+</svg>
