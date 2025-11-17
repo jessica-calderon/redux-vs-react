@@ -76,7 +76,7 @@ export default function ReduxStatePage() {
           This search uses <strong>Redux with createAsyncThunk</strong> to demonstrate async operations. 
           When you type, it dispatches an async action that simulates an API call (500ms delay). 
           Notice the "Loading..." indicator - this shows Redux handling async state (pending, fulfilled, rejected) automatically. 
-          In a real app, this would fetch data from an API. The state is also stored globally, so it persists across navigation!
+          In a real app, this would fetch data from an API. The state is also stored globally, so it persists across navigation 
         </p>
         <input
           type="text"
@@ -99,15 +99,15 @@ export default function ReduxStatePage() {
         </div>
         <p className="search-note">
           <i className="fas fa-lightbulb"></i> <strong>Key Difference:</strong> Redux automatically manages loading/error states through the async thunk. 
-          Check Redux DevTools to see the pending → fulfilled action flow!
+          Check Redux DevTools to see the pending to fulfilled action flow
         </p>
       </div>
 
       <div className="explanation-box">
         <h3>Why Redux State Management Matters:</h3>
         <ul>
-          <li><i className="fas fa-check-circle"></i> <strong>Persists Across Navigation</strong> - Increment the counter, then navigate to "Local State Demo" and back. The counter stays! Check the nav bar - it shows the same value even when you're on a different page.</li>
-          <li><i className="fas fa-check-circle"></i> <strong>Persists Across Page Refreshes</strong> - Increment the counter, then refresh the page. It's still there! State is saved to localStorage automatically.</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Persists Across Navigation</strong> - Increment the counter, then navigate to "Local State Demo" and back. The counter stays persistent. Check the nav bar, it shows the same value even when you're on a different page.</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Persists Across Page Refreshes</strong> - Increment the counter, then refresh the page. It's still there, state is saved to localStorage automatically.</li>
           <li><i className="fas fa-check-circle"></i> <strong>Global Access</strong> - Any component can access this state without prop drilling. The Navigation component shows the counter even though it's not on this page.</li>
           <li><i className="fas fa-check-circle"></i> <strong>Centralized Store</strong> - Single source of truth. One place to manage state, accessible from anywhere.</li>
           <li><i className="fas fa-check-circle"></i> <strong>Async Operations</strong> - Built-in support for async actions (see search above with loading states)</li>

@@ -79,14 +79,14 @@ export default function LocalStatePage() {
       <div className="explanation-box">
         <h3>React Native State Management (useState, useContext):</h3>
         <ul>
-          <li><i className="fas fa-check-circle"></i> <strong>Simple</strong> - useState for component-level state, useContext for sharing across a few components</li>
+          <li><i className="fas fa-check-circle"></i> <strong>Simple</strong> - useState for component level state, useContext for sharing across a few components</li>
           <li><i className="fas fa-check-circle"></i> <strong>No Dependencies</strong> - Built into React, no extra libraries needed</li>
           <li><i className="fas fa-check-circle"></i> <strong>Perfect for Small Apps</strong> - Great when state is only needed in a few components</li>
-          <li><i className="fas fa-exclamation-triangle"></i> <strong>State is Lost on Navigation</strong> - Increment the counter, navigate to Redux page and back. It resets to 0!</li>
+          <li><i className="fas fa-exclamation-triangle"></i> <strong>State is Lost on Navigation</strong> - Increment the counter, navigate to Redux page and back. It resets to 0</li>
           <li><i className="fas fa-exclamation-triangle"></i> <strong>State is Lost on Refresh</strong> - Refresh the page and all state resets. It's stored in memory only.</li>
           <li><i className="fas fa-exclamation-triangle"></i> <strong>Component-Scoped</strong> - State lives with the component. When component unmounts, state is gone.</li>
-          <li><i className="fas fa-exclamation-triangle"></i> <strong>No Global Access</strong> - Can't easily access this counter from other components without prop drilling</li>
-          <li><i className="fas fa-exclamation-triangle"></i> <strong>No Built-in Persistence</strong> - Would need to manually add localStorage for persistence</li>
+          <li><i className="fas fa-exclamation-triangle"></i> <strong>No Global Access</strong> We can't easily access this counter from other components without prop drilling</li>
+          <li><i className="fas fa-exclamation-triangle"></i> <strong>No Built-in Persistence</strong> We would need to manually add localStorage for persistence</li>
         </ul>
       </div>
     </div>
