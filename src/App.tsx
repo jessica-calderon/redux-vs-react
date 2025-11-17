@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
 import Navigation from './components/Navigation'
 import LocalStatePage from './pages/LocalStatePage'
@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app">
         <Navigation />
         <Routes>
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Navigate to="/local-state" replace />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

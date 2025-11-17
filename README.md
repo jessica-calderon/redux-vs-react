@@ -155,45 +155,62 @@ The Redux page is configured to work with Redux DevTools. To use it:
 
 ## 📦 Deployment to GitHub Pages
 
-### Step 1: Update `vite.config.ts`
+This project is configured for GitHub Pages deployment. The following configurations are already set up:
 
-The base path is already configured:
+### Configuration Files
+
+**`vite.config.ts`:**
 ```typescript
-base: '/redux-vs-react/',
+export default defineConfig({
+  plugins: [react()],
+  base: '/redux-vs-react/',
+})
 ```
 
-**Important:** Update this to match your repository name if different.
-
-### Step 2: Update `package.json`
-
-Update the homepage field with your GitHub username:
+**`package.json`:**
 ```json
-"homepage": "https://YOUR_USERNAME.github.io/redux-vs-react"
+{
+  "homepage": "https://jessica-calderon.github.io/redux-vs-react",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}
 ```
 
-### Step 3: Install gh-pages (if not already installed)
+**`src/App.tsx`:**
+```typescript
+<BrowserRouter basename="/redux-vs-react">
+```
 
+### Deploying
+
+1. **Install dependencies** (if not already installed):
 ```bash
-npm install --save-dev gh-pages
+npm install
 ```
 
-### Step 4: Deploy
-
+2. **Deploy to GitHub Pages**:
 ```bash
 npm run deploy
 ```
 
 This will:
-1. Build the project
-2. Deploy the `dist` folder to the `gh-pages` branch
-3. Make your site available at `https://YOUR_USERNAME.github.io/redux-vs-react`
+- Run `predeploy` script to build the project
+- Deploy the `dist` folder to the `gh-pages` branch
+- Make your site available at `https://jessica-calderon.github.io/redux-vs-react`
 
-### Step 5: Configure GitHub Pages
+3. **Configure GitHub Pages** (first time only):
+   - Go to your repository on GitHub
+   - Navigate to **Settings → Pages**
+   - Select the `gh-pages` branch as the source
+   - Your site will be live in a few minutes
 
-1. Go to your repository on GitHub
-2. Navigate to Settings → Pages
-3. Select the `gh-pages` branch as the source
-4. Your site will be live in a few minutes
+### Important Notes
+
+- The `base` path in `vite.config.ts` must match your repository name
+- The `basename` in `BrowserRouter` must match the `base` path
+- The `homepage` in `package.json` should match your GitHub Pages URL
 
 ## 🧪 Available Scripts
 
